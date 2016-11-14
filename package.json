@@ -1,0 +1,35 @@
+{
+  "name": "election-2016",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo test",
+    "lint": "jshint --reporter=node_modules/jshint-stylish --exclude=js/bb-code-styles.css build/js/*; exit 0",
+    "prebuild": "npm run lint; npm run autoprefixer; npm run updateHTML; npm run updatePHP;",
+    "build": "browserify build/js/main.js | uglifyjs > dist/election2016-main.min.js",
+    "build-dev": "npm run prebuild; browserify build/js/main.js -o dist/election2016-main.min.js",
+    "watch": "nodemon -e js,css,html,php -w build -x 'npm run build-dev'",
+    "autoprefixer": "postcss -u autoprefixer -o dist/election2016-style.css build/css/*",
+    "updateHTML": "cp build/index.html dist/index.html",
+    "updatePHP": "phplint './build/*.php'; cp build/election2016-results.php dist/election2016-results.php;",
+    "watchPHP": "nodemon -e js,css,html,php -w build -x 'npm run updatePHP'"
+  },
+  "author": "Andrew Briz",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "browserify": "^13.1.0",
+    "csslint": "^1.0.2",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1",
+    "nodemon": "^1.10.2",
+    "phplint": "^1.7.1",
+    "postcss-cli": "^2.5.2",
+    "uglify-js": "^2.7.3"
+  },
+  "dependencies": {
+    "d3": "^4.3.0",
+    "normalize.css": "^4.2.0"
+  }
+}

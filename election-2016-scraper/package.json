@@ -1,0 +1,22 @@
+{
+  "name": "election-2016-scraper",
+  "version": "1.0.0",
+  "description": "Web Scraping",
+  "main": "server.js",
+  "author": "Andrew Briz",
+    "scripts": {
+    "test": "echo test",
+    "lint": "jshint --reporter=node_modules/jshint-stylish --exclude=js/bb-code-styles.css ./server.js; exit 0",
+    "watch": "nodemon -e js -x 'npm run lint'"
+  },
+  "dependencies": {
+    "cheerio": "latest",
+    "mysql": "^2.11.1",
+    "request": "latest"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1",
+    "nodemon": "^1.10.2"
+  }
+}

@@ -1,0 +1,4 @@
+# WUFT Election 2016 Scraper
+The scraper pulls data from the official [Florida Division of Elections Results page](http://enight.elections.myflorida.com/), and the [individual county Supervisor of Elections Results pages](http://enight.elections.myflorida.com/CountyReportingStatus/) for each of the 13 local counties we were covering. Data was inputted into an SQL database where an [API call](../dist/election2016-results.php) could pull them.
+
+*Note: The Florida Division of Elections Results page changes after each election. The results I saw may not be the same you see if you are viewing this after the 2018 midterm elections.*

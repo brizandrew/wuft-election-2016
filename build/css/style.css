@@ -1,0 +1,337 @@
+#main-content{
+	z-index: 0;
+}
+
+#election-results{
+	font-family: Georgia, serif;
+}
+
+#election-results h1, 
+#election-results h2,
+#election-results h3,
+#election-results h4,
+#election-results h5,
+#election-results h6{
+	font-family: 'Crete Round', serif;
+	font-weight: normal;
+}
+
+#election-results h1,
+#election-results h2{
+	text-align: center;
+}
+
+#election-results h1{
+	font-size: 60px;
+	margin: 0 0 10px 0;
+}
+
+#election-results h2{
+	margin-top: 5px;
+}
+
+#election-results a{
+	color: #3073e0;
+	text-decoration: underline;
+}
+
+#election-results{
+	width: 100%;
+	max-width: 1010px;
+	margin: 0 auto;
+}
+#election-results #election-foreword{
+	max-width: 700px;
+    margin: 0 auto;
+}
+
+#election-results #lastUpdated{
+	color: #a5a5a5;
+	font-style: italic;
+	margin: 14px 0 7px 0;
+}
+
+#election-results #election-results-sections{
+	width: 78%;
+	float: left;
+}
+
+#election-results .section{
+	padding: 10px;
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-bottom: 4px solid #f04e23;
+	box-shadow: 0 0 3px #CACACA;
+}
+
+#election-results .section:first-child{
+	margin-top: 0px;
+}
+
+#election-results .section-heading{
+	margin: 0;
+	font-size: 30px;
+	flex-basis: 100%;
+}
+
+#election-results .section-races{
+	width: 100%;
+}
+
+#election-results .race{
+	position: relative;
+	margin-top: 20px;
+}
+
+#election-results .race-heading{
+	display: inline;
+	margin: 0;
+}
+
+#election-results .race-called{
+	float: left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 21px;
+	margin-right: 3px;
+}
+
+#election-results .race-precincts{
+	display: inline;
+	float: right;
+	margin: 0;
+}
+
+#election-results .race svg{
+	clear: both;
+	margin-top: 10px;
+}
+
+#election-results .race image,
+#election-results .race circle{
+	cursor: pointer;
+}
+
+#election-results .race-backgroundBar{
+	height: 20px;
+	opacity: 0.4;
+	position: absolute;
+	bottom: 6px;
+	box-sizing: border-box;
+	width: 100%;
+	z-index: -1;
+	border: 1px solid #818181;
+}
+
+#election-results #loadScreen{
+	display: none;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+	width: 75%;
+	float: left;
+}
+
+#election-results #loadScreen[toggle='on']{
+	display: flex;
+}
+
+#election-results #loadScreen img{
+	height: 50px;
+}
+
+#election-results #election-results-filter-dropdown{
+	display: none;
+	margin: 15px 0;
+}
+
+#election-results #election-results-filter-dropdown h4{
+    margin: 0 0 5px 0;
+}
+
+#election-results #election-results-filter-dropdown select{
+	width: 100%;
+}
+
+#election-results #election-results-sidePanel{
+	width: calc(22% - 20px);
+	float: right;
+	padding: 0 15px;
+	margin: 0px 0 0 20px;
+	border-bottom: 4px solid #f04e23;
+	box-shadow: 0 0 3px #CACACA;
+}
+
+#election-results #election-results-sidePanel h5{
+	margin: 0;
+}
+
+#election-results #election-results-sidePanel ul{
+	padding: 0;
+	margin: 0 0 20px 0;
+}
+
+#election-results #election-results-sidePanel li{
+    margin-top: 13px;
+    color: #3073e0;
+    text-decoration: underline;
+    cursor: pointer;
+    list-style: none;
+}
+
+#election-results #election-results-sidePanel li.selected{
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+/* Modal */
+#election-results .modalContainer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+}
+
+#election-results .modalContent{
+	background-color: white;
+	position: relative;
+	margin: 0 auto;
+    padding: 15px 15px 10px 15px;
+    border-radius: 15px;
+	box-sizing: border-box;
+	min-width: 250px;
+}
+
+#election-results .modalContent h3{
+	display: inline;
+	padding-right: 30px;
+	margin: 0;
+	font-size: 30px;
+}
+
+#election-results .modalContent h4{
+	margin: 9px 0 0 0;
+}
+
+#election-results .modalContent .candidateModal-value{
+	font-family: Georgia, serif;
+	font-weight: normal;
+}
+
+#election-results .candidateModal-imgContainer{
+	float: right;
+	margin-right: 13px;
+	margin-top: -15px;
+	height: 100px;
+	width: 100px;
+}
+
+#election-results .modalContent p{
+	margin: 0;
+}
+
+#election-results .modalContent .modal-close{
+	position: absolute;
+	right: 15px;
+	top: 9px;
+	color: #b9b5b5;
+	padding: 0;
+	cursor: pointer;
+	font-size: 25px;
+	font-family: sans-serif;
+	font-weight: normal;
+	background-color: white;
+    border: none;
+}
+
+@media (max-width: 700px) {
+	#election-results{
+		padding: 0 30px;
+		box-sizing: border-box;
+	}
+
+	#election-results h1{
+		font-size: 45px;
+	}
+
+	#election-results h2{
+		font-size: 35px;
+	}
+
+	#election-results #election-results-filter-dropdown{
+		display: block;
+	}
+
+	#election-results #election-results-sidePanel{
+		display: none;
+	}
+
+	#election-results #election-results-sections,
+	#election-results #loadScreen{
+		width: 100%;
+	}
+
+	#election-results .section{
+		box-shadow: none;
+	}
+}
+
+@media (max-width: 480px) {
+	#election-results h1{
+		font-size: 30px;
+	}
+
+	#election-results h2{
+		font-size: 18px;
+	}
+
+
+	#election-results{
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+
+	#election-results .race-heading{
+		display: block;
+		margin: 0;
+	}
+
+	#election-results .race-precincts{
+		display: block;
+		float: none;
+		margin-top: 5px;
+	}
+}
+
+@media (max-width: 320px) {
+	#election-results h1{
+		font-size: 25px;
+	}
+
+	#election-results h2{
+		font-size: 15px;
+	}
+
+	#election-results .candidateModal-imgContainer{
+		float: none;
+		margin: -10px 0 15px 0;
+	}
+
+	#election-results .modalContent h3{
+		display: block;
+		padding-right: 0; 
+		margin: 0 18px 0 0;
+		font-size: 30px;
+	}
+}
