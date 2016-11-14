@@ -1,7 +1,7 @@
 # WUFT Election 2016
 WUFT had the results of the 2016 elections on its home page like many news organizations did and have for years. Unlike many local stations, we displayed live results for every contested race in our 13 county coverage area. The results were scraped and displayed using a custom scraper, API, and d3 charting system. The code for all these applications can be found in this repo.
 #### The Page
-The results page comes in two versions: a [standalone HTML file](./dist/index.html) and a [Wordpress template file](./dist/template-election-2016.php). You can see the archived version of these results on [WUFT's 2016 Election Results page](http://www.wuft.org/news/election-2016-results/).
+The results page comes in two versions: a [standalone HTML file](./dist/index.html) and a [Wordpress template file](./dist/template-election2016.php). You can see the archived version of these results on [WUFT's 2016 Election Results page](http://www.wuft.org/news/election-2016-results/).
 #### The Scraper
 [The scraper](./election-2016-scraper) was able to get almost all the results autonomously. A person had to input those results manually because WUFT does not subscribe to an official presidential results feed. Furthermore, scraping the number of "counties reporting" for multi-county races did not work either. Because this was discovered after the scraper launched, my solution was to comment out that part and fill in the results manually. Since the 2016 election is over, I don't plan on revisiting that until the next election.
 #### The API
